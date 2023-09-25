@@ -1,0 +1,9 @@
+# dotnet build
+bin/
+obj/
+
+# ide specific
+.idea/
+
+# user specific
+*.DotSettings.user
