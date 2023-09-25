@@ -1,6 +1,6 @@
 using Cnc.Data.Models;
 
-namespace Cnc.Server.GraphQl.Resolvers;
+namespace Cnc.Server.GraphQl.Types;
 
 public class CampaignType : ObjectType<Campaign>
 {

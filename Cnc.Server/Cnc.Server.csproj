@@ -6,6 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <RootNamespace>Cnc.Server</RootNamespace>
+        <UserSecretsId>a4c032b9-3418-45e8-a4d3-f5b6ef122f7b</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,15 +19,16 @@
     <ItemGroup>
       <PackageReference Include="Cnc.Data" Version="0.0.2" />
       <PackageReference Include="HotChocolate.AspNetCore" Version="13.5.1" />
+        <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="13.5.1"/>
       <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.5.1" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.11"/>
       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="7.0.11" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="7.0.11" />
       <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.11" />
+
+
     </ItemGroup>
-
-
-
 
 
 </Project>

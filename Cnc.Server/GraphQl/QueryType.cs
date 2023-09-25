@@ -7,8 +7,9 @@ public class QueryType: ObjectType
     protected override void Configure(IObjectTypeDescriptor descriptor)
     {
         descriptor
+            .Authorize()
             .Field("user")
-            .ResolveWith<QueryResolvers>(r => r.GetUser(default!, default!));
+            .ResolveWith<QueryResolvers>(r => r.GetUser(default!, default!, default!));
     }
 }
 

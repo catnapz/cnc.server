@@ -19,6 +19,13 @@ public class UserResolvers
     /// <summary>
     /// Return a campaigns by campaignId under User query
     /// </summary>
-    public Campaign GetCampaignById([Parent] User user, int campaignId) => user.Campaigns
-        .Single(campaign => campaign.Id == campaignId);
+    public async Task<Campaign> GetCampaignById(CncContext dbContext, [Parent] User user, int campaignId)
+    {
+        return await dbContext
+            .Campaigns
+            .AsNoTracking()
+            .SingleAsync(campaign =>
+                campaign.User.Id == user.Id &&
+                campaign.Id == campaignId);
+    }
 }
