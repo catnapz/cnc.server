@@ -29,6 +29,8 @@ builder.Services
 // Database
 builder.Services.AddNpgsql<CncContext>(builder.Configuration.GetValue<string>("ConnectionStrings:Database"));
 
+builder.Services.AddControllers();
+
 // GraphQL
 builder.Services
     .AddGraphQLServer()
@@ -48,7 +50,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapHealthChecks("/healthz");
-
 app.MapGraphQL("/api");
+app.MapControllers();
 
 app.Run();
